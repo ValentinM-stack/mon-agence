@@ -1,6 +1,6 @@
 version: "3.8"
 
-services: # commentaire pour forcer un conflit
+services:
   frontend:
     build: ./frontend
     container_name: frontend
@@ -8,3 +8,9 @@ services: # commentaire pour forcer un conflit
       - 8080:80
     volumes:
       - ./frontend:/usr/local/apache2/htdocs
+
+  backend:
+    build: ./backend
+    container_name: backend
+    volumes:
+      - ./backend:/app
