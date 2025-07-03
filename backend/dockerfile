@@ -1,7 +1,7 @@
 FROM alpine:latest
 
-COPY . /app
+COPY app.sh /app.sh
 
-RUN chmod +x /app/app.sh
+RUN chmod +x /app.sh
 
-CMD ["/app/app.sh"]
+CMD ["/app.sh"]
