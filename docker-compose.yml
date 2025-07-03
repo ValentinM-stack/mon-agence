@@ -1,6 +1,6 @@
 version: "3.8"
 
-services:
+services: # commentaire pour forcer un conflit
   frontend:
     build: ./frontend
     container_name: frontend
