@@ -8,3 +8,9 @@ services:
       - 8080:80
     volumes:
       - ./frontend:/usr/local/apache2/htdocs
+
+  backend:
+    build: ./backend
+    container_name: backend
+    volumes:
+      - ./backend:/app
