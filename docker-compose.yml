@@ -12,7 +12,6 @@ services:
     container_name: backend
     volumes:
       - ./backend/app.sh:/app.sh
-    restart: always
 
   db:
     image: mysql:latest
