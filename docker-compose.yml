@@ -1,14 +1,6 @@
 version: "3.8"
 
 services:
-  frontend:
-    build: ./frontend
-    container_name: frontend
-    ports:
-      - 8080:80
-    volumes:
-      - ./frontend:/usr/local/apache2/htdocs
-
   backend:
     build: ./backend
     container_name: backend
