@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   frontend:
     build: ./frontend
@@ -14,3 +12,22 @@ services:
     container_name: backend
     volumes:
       - ./backend:/app
+
+  db:
+    image: mysql:latest
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - 3306:3306
+
+  phpMyadmin:
+    image: phpmyadmin:latest
+    container_name: phpMyadmin
+    environment:
+      - PMA_HOST=db
+    ports:
+      - 8081:80
+    depends_on:
+      - db
